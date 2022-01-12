@@ -17,7 +17,7 @@ resource "aws_instance" "app_instance" {
   # Ensure we have this key in the .ssh folder
   key_name = var.aws_key_name
   tags = {
-    Name = "eng99_joseph_terraform_app"
+    Name = "eng99_vigneshraj_terraform_app"
   }
 }
 
@@ -30,7 +30,7 @@ resource "aws_instance" "db_instance" {
   # Ensure we have this key in the .ssh folder
   key_name = var.aws_key_name
   tags = {
-    Name = "eng99_joseph_terraform_db"
+    Name = "eng99_vigneshraj_terraform_db"
   }
 }
 
