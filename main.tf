@@ -38,7 +38,7 @@ resource "aws_vpc" "eng99_joseph_terraform_VPC"{
   cidr_block = var.cidr_block
 
   tags = {
-    Name = "eng99_joseph_terraform_VPC"
+    Name = "eng99_vigneshraj_terraform_jenkins_VPC"
   }
 }
 
@@ -49,7 +49,7 @@ resource "aws_subnet" "eng99_joseph_terraform_public_SN" {
   availability_zone = "eu-west-1a"
 
   tags = {
-    Name = "eng99_joseph_terraform_public_SN"
+    Name = "eng99_vigneshraj_terraform_public_SN"
   }
 }
 
@@ -57,7 +57,7 @@ resource "aws_internet_gateway" "eng99_joseph_terraform_igw" {
   vpc_id = aws_vpc.eng99_joseph_terraform_VPC.id
 
   tags = {
-    Name = "eng99_joseph_terraform_igw"
+    Name = "eng99_vigneshraj_terraform_igw"
   }
 }
 
@@ -70,7 +70,7 @@ resource "aws_route_table" "eng99_joseph_terraform_rt" {
     }
 
   tags = {
-    Name = "eng99_joseph_terraform_rt"
+    Name = "eng99_vigneshraj_terraform_rt"
   }
 }
 
@@ -107,7 +107,7 @@ resource "aws_route_table_association" "eng99_joseph_terraform_subnet_associate"
 # Inbound rules are called ingress
 # Outbound are called egress
 resource "aws_security_group" "allow_tls" {
-  name        = "allow_tls"
+  name        = "eng99_vigneshraj_terraform_jenkins"
   description = "Allow TLS inbound traffic"
   vpc_id      = aws_vpc.eng99_joseph_terraform_VPC.id
 
