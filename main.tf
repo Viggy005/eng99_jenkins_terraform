@@ -25,7 +25,7 @@ resource "aws_instance" "db_instance" {
   ami = var.app_ami_id
   instance_type = var.app_instance_type
   # Enable public IP
-  associate_public_ip_address = false
+  associate_public_ip_address = true
   # added eng99.pem so one can ssh
   # Ensure we have this key in the .ssh folder
   key_name = var.aws_key_name
